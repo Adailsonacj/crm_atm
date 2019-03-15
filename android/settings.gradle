@@ -1,0 +1,3 @@
+rootProject.name = 'crm_atm'
+
+include ':app'
