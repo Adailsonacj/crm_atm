@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { View, StatusBar, Image } from 'react-native';
+import { View, StatusBar, Image, StyleSheet } from 'react-native';
 import BarraNavegacao from './BarraNavegacao';
 
 const logo = require('../imgs/logo.png')
@@ -19,12 +19,37 @@ export default class CenaPrincipal extends Component {
 
                 <BarraNavegacao />
 
-                <Image source={logo} />
-                <Image source={menuCliente} />
-                <Image source={menuContato} />
-                <Image source={menuServico} />
-                <Image source={menuEmpresa} />
+                <View style={styles.logo}>
+                    <Image source={logo} />
+                </View>
+                <View style={styles.menu}>
+                    <View style={styles.itensMenu}>
+                        <Image style={styles.imageMenu} source={menuCliente} />
+                        <Image style={styles.imageMenu} source={menuContato} />
+                    </View>
+                    <View style={styles.itensMenu}>
+                        <Image style={styles.imageMenu} source={menuServico} />
+                        <Image style={styles.imageMenu} source={menuEmpresa} />
+                    </View>
+                </View>
             </View>
         );
     }
 }
+
+const styles = StyleSheet.create({
+    logo: {
+        marginTop: 30,
+        alignItems: 'center'
+    },
+    menu: {
+        alignItems: 'center',
+        marginTop:50
+    },
+    itensMenu: {
+        flexDirection: 'row'
+    },
+    imageMenu: {
+        margin: 15
+    }
+});

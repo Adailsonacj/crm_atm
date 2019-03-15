@@ -25,6 +25,6 @@ const styles = StyleSheet.create({
 		flex: 1,
 		fontSize: 18,
 		textAlign: 'center',
-		color: '#000'
+		color: '#FFF'
 	}
 });
