@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
-import { View, Image, StyleSheet, Text } from 'react-native';
+import { View, Image, StyleSheet, Text, StatusBar } from 'react-native';
 
-const logo = require('./imgs/logo.png')
 const detalheCliente = require('./imgs/detalhe_cliente.png')
 const cliente1 = require('./imgs/cliente1.png')
 const cliente2 = require('./imgs/cliente2.png')
@@ -9,7 +8,11 @@ const cliente2 = require('./imgs/cliente2.png')
 export default class CenaClientes extends Component {
     render() {
         return (
-            <View>
+            <View style={{flex: 1, backgroundColor: '#fff'}}>
+                <StatusBar
+                    //hidden
+                    backgroundColor='#B9C941'
+                />
                 <View style={styles.cabecalho}>
                     <Image source={detalheCliente} />
                     <Text style={styles.txtTitulo}>Nossos Clientes</Text>
