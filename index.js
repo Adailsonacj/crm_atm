@@ -1,14 +1,13 @@
-import React, { Component } from 'react';
-import { AppRegistry } from 'react-native';
-import CenaPrincipal from './src/components/CenaPrincipal'
-import CenaClientes from './src/components/CenaClientes'
+/**
+ * @format
+ */
+import { AppRegistry } from "react-native";
+import Navigator from "./src";
 
-export default class Main extends Component {
-  render() {
-    return (
-      <CenaClientes />
-    );
-  }
-}
+import { createAppContainer } from "react-navigation";
 
-AppRegistry.registerComponent('crm_atm', () => Main);
+const App = createAppContainer(Navigator.StackNavigator); // Descomente para usar o StackNavigator.
+// const App = createAppContainer(Navigator.TabNavigator); // Descomente para usar o TabNavigator.
+// const App = createAppContainer(Navigator.DrawerNavigator); // Descomente para usar o DrawerNavigator.
+
+AppRegistry.registerComponent('crm_atm', () => App);
