@@ -1,5 +1,9 @@
 [Dolphin]
+<<<<<<< HEAD
 Timestamp=2019,3,18,15,11,8
+=======
+Timestamp=2019,3,18,14,56,4
+>>>>>>> cc3f1982bfeba0a0e39e6d5b7602c28ad9d5801b
 Version=4
 
 [Settings]
